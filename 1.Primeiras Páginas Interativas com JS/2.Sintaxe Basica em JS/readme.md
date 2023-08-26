@@ -22,6 +22,25 @@
     null
     function
 
+### manipulação de array.
+
+- forEach(item, index) - itera um array (executa uma ação para cada indice)
+- push() - add item no final da array
+- pop() - remove item do final da array
+- shift() - remove item do inicio da array
+- unshift() - add item no inicio da array
+- indexOf() - retorna o indice de um valor
+- splice() - remove ou substitui um item pelo índice
+- slice() - retorna uma parte de um array existente - Retorna um array que é o recorte de outro array.
+
+
+### estruturas de repetição
+- for
+- for/in
+- for/of
+- while
+- do/while
+
 ### Ferramentas e extensões que vamos utilizr
 
 ### Pratica
