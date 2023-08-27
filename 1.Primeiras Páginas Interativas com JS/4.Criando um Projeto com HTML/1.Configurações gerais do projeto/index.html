@@ -1,14 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Introducao ao devweb JS</title>
-
+ <title>Pokedex</title>
+ <!-- icone -->
  <link rel="icon" href="favicon.ico">
+ <!-- font -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+ <!-- CSS -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+ <link rel="stylesheet" href="./assets/css/global.css">
+ <link rel="stylesheet" href="./assets/css/media queries.css">
+ <link rel="stylesheet" href="./assets/css/pokemons-card.css">
 </head>
+
 <body>
- <h1>Title</h1>
+ <main>
+  <section class="content">
+   <h1>Pokedex</h1>
+   <ol class="lista-pokemons">
+    <li class="lista-pokemons-card" style="background-image: url(./assets/imagens/1.svg); ">
+     <span class="lista-pokemons-id">#001</span>
+     <h2 class="lista-pokemons-card-name">Bulbasaur</h2>
+     <p class="lista-pokemons-card-info">Grass</p>
+     <p class="lista-pokemons-card-info">Poison</p>
+    </li>
+    <li class="lista-pokemons-card">
+     <h2 class="lista-pokemons-card-name">Ivysaur</h2>
+     <p class="lista-pokemons-card-info">Grass</p>
+     <p class="lista-pokemons-card-info">Poison</p>
+    </li>
+    <li class="lista-pokemons-card">
+     <h2 class="lista-pokemons-card-name">Venosaur</h2>
+     <p class="lista-pokemons-card-info">Grass</p>
+     <p class="lista-pokemons-card-info">Poison</p>
+    </li>
+    <li class="lista-pokemons-card">
+     <h2 class="lista-pokemons-card-name">Venosaur</h2>
+     <p class="lista-pokemons-card-info">Grass</p>
+     <p class="lista-pokemons-card-info">Poison</p>
+    </li>
+    <li class="lista-pokemons-card">
+     <h2 class="lista-pokemons-card-name">Venosaur</h2>
+     <p class="lista-pokemons-card-info">Grass</p>
+     <p class="lista-pokemons-card-info">Poison</p>
+    </li>
+
+    <li>
+     Charmander
+    </li>
+    <li>
+     Charmeleon
+    </li>
+    <li>
+     Charizard
+    </li>
+   </ol>
+  </section>
+
+ </main>
+
+
+ <script src="./assets/javascript/main.js"></script>
 </body>
+
 </html>
