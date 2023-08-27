@@ -6,9 +6,11 @@ class cardPokemon {
 
  getAPI() {
   let pokemonId = this.id
-  let apiAdress= `https://pokeapi.co/api/v2/pokemon/${pokemonId}/`
+  let apiAdress = `https://pokeapi.co/api/v2/pokemon/1/`
 
-  fetch(apiAdress).then(response => console.log(response))
+  fetch(apiAdress).then(response => response.json()).then((data) => {
+   console.log(data)
+  })
  }
  getAPI()
 }

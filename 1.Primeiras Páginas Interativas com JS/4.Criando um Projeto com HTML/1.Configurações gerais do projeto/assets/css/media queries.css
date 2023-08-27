@@ -2,31 +2,25 @@
 @media screen and (min-width: 586px) {
   .content {
     max-width: 768px;
-  }
-
-  .lista-pokemons {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+  } 
 }
 
 /* tablet */
-@media screen and (min-width: 768px) {
-  .content {
-    max-width: 90%;
-  }
+@media screen and (min-width: 768px) {  
+  
+  .lista-pokemons {
+   grid-template-columns: 1fr 1fr 1fr;
+ }
 }
 
 /* small desketop */
 @media screen and (min-width: 1100px) {
-  .content {
-    max-width: 1100px;
-  }
-
+ 
   .lista-pokemons {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
 /* desktop */
-@media screen and (min-width: 1560px) {
+@media screen and (min-width: 1100px) {
 }
