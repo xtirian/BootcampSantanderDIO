@@ -1,0 +1,241 @@
+.type::before{
+ content: "";
+  position: absolute;
+  width: 150px;
+  height: 120px;
+  border-radius: 20px;
+  top: 0;
+  left: 0;  
+  z-index: -2;
+
+}
+
+.type-Normal::before {
+ background-color: #c2b5b0;
+}
+.type-Normal .lista-pokemons-id {
+ color: #c5b3af;
+}
+.type-Normal .lista-pokemons-card-info {
+
+background-color: #d6cdce;
+}
+
+.type-Fighting::before {
+ background-color: #d78c10
+}
+
+.type-Fighting .lista-pokemons-id {
+ color: #da7e11;
+}
+.type-Fighting .lista-pokemons-card-info {
+
+background-color: #f5c83d;
+}
+
+.type-Flying::before {
+ background-color: #a39e9a
+}
+
+.type-Flying .lista-pokemons-id {
+ color: #484c4e;
+}
+.type-Flying .lista-pokemons-card-info {
+
+background-color: #e5e0dc;
+}
+
+.type-Poison::before {
+ background-color: #b56fc2
+}
+
+.type-Poison .lista-pokemons-id {
+ color: #8a339b;
+}
+.type-Poison .lista-pokemons-card-info {
+
+background-color: #dfbae9;
+}
+
+.type-Ground::before {
+ background-color: #eb9435
+}
+
+.type-Ground .lista-pokemons-id {
+ color: #e27c38;
+}
+.type-Ground .lista-pokemons-card-info {
+
+background-color: #f8c837;
+}
+
+.type-Rock::before {
+ background-color: #d88738
+}
+
+.type-Rock .lista-pokemons-id {
+ color: #d17529;
+}
+.type-Rock .lista-pokemons-card-info {
+
+background-color: #eec18a;
+}
+
+.type-Bug::before {
+ background-color: #9fc74c
+}
+
+.type-Bug .lista-pokemons-id {
+ color: #97c24e;
+}
+.type-Bug .lista-pokemons-card-info {
+
+background-color: #b8d347;
+}
+
+.type-Ghost::before {
+ background-color: #9d6cae
+}
+
+.type-Ghost .lista-pokemons-id {
+ color: #7f52a7;
+}
+.type-Ghost .lista-pokemons-card-info {
+
+background-color: #bba2d0;
+}
+
+.type-Steel::before {
+ background-color: #cfc9c8
+}
+
+.type-Steel .lista-pokemons-id {
+ color: #c6b9b6;
+}
+.type-Steel .lista-pokemons-card-info {
+
+background-color: #d8d4d2;
+}
+
+.type-Fire::before {
+ background-color: #fb6c6c
+}
+
+.type-Fire .lista-pokemons-id {
+ color: #f56060;
+}
+.type-Fire .lista-pokemons-card-info {
+
+background-color: #fc8484;
+}
+
+.type-Water::before {
+ background-color: #76bdfe
+}
+
+.type-Water .lista-pokemons-id {
+ color: #6eb4f8;
+}
+.type-Water .lista-pokemons-card-info {
+
+background-color: #8fd0fe;
+}
+
+.type-Grass::before {
+  background-color: #46d1b2;
+}
+.type-Grass .lista-pokemons-id {
+  color: #3fc7a8;
+}
+.type-Grass .lista-pokemons-card-info {
+
+ background-color: #5de0c7;
+}
+
+.type-Electric::before {
+  background-color: #ffd86f;
+}
+.type-Electric .lista-pokemons-id {
+  color: #f0d23c;
+}
+.type-Electric .lista-pokemons-card-info {
+
+ background-color: #ffe17a;
+}
+
+.type-Psychic::before {
+  background-color: #dcaee6;
+}
+.type-Psychic .lista-pokemons-id {
+  color: #b266b7;
+}
+.type-Psychic .lista-pokemons-card-info {
+
+ background-color: #e3c9ef;
+}
+
+.type-Ice::before {
+ background-color: #83a1d5;
+}
+.type-Ice .lista-pokemons-id {
+ color: #6087d5;
+}
+.type-Ice .lista-pokemons-card-info {
+
+background-color: #ddeced;
+}
+
+.type-Dragon::before {
+ background-color: #889448;
+}
+.type-Dragon .lista-pokemons-id {
+ color: #787435;
+}
+.type-Dragon .lista-pokemons-card-info {
+
+background-color: #8d9c51;
+}
+
+.type-Dark::before {
+ background-color: #4c535a;
+}
+.type-Dark .lista-pokemons-id {
+ color: #414b4d;
+}
+.type-Dark .lista-pokemons-card-info {
+
+background-color: #90999f;
+}
+
+.type-Fairy::before {
+ background-color: #cb3f7f;
+}
+.type-Fairy .lista-pokemons-id {
+ color: #861d32;
+}
+.type-Fairy .lista-pokemons-card-info {
+
+background-color: #df4585;
+}
+
+.type-Unknown::before{
+ background-color: #a389c0;
+}
+.type-Unknown .lista-pokemons-id {
+ color: #a184b5;
+}
+.type-Unknown .lista-pokemons-card-info {
+
+background-color: #d1cae5;
+}
+
+.type-Shadow::before {
+ background-color: #a389c0;
+}
+.type-Shadow .lista-pokemons-id {
+ color: #a184b5;
+}
+.type-Shadow .lista-pokemons-card-info {
+
+background-color: #d1cae5;
+}

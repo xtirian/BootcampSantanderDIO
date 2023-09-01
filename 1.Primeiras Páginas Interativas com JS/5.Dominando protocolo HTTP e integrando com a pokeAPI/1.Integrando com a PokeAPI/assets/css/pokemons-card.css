@@ -1,65 +1,82 @@
 .content {
- padding: 4rem;
- margin: 0 auto;
+  padding: 4rem;
+  margin: 0 auto;
 }
 
 .content h1 {
- font-size: 9rem;
+  font-size: 9rem;
 
-color: #2d3540;
+  color: #2d3540;
 }
 
 .lista-pokemons {
- list-style: none;
- padding: 0;
- width: 100%;
+  list-style: none;
+  padding: 0;
+  width: 100%;
 
- display: grid;
- grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
- color: #f0f2f6;
+  color: #f0f2f6;
 }
 
 .lista-pokemons-card {
- position: relative;
- margin: 2rem auto;
- padding: 2rem;
- width: 150px;
- background-color: #46d1b2;
- border-radius: 20px;
+  position: relative;
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 150px;
+  min-height: 117px;
 
- background-size: 60px 60px;
- background-position: bottom 10px right 10px;
- background-repeat: no-repeat;
+  border-radius: 20px;
 
- box-shadow: 10px 5px 10px #bfbfbf;
+  background-size: 60px 60px;
+  background-position: bottom 10px right 10px !important;
+  background-repeat: no-repeat !important;
+
+  box-shadow: 10px 5px 10px #bfbfbf;
+}
+
+.lista-pokemons-card::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 117px;
+  opacity: 20%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+
+  background-image: url(../imagens/pokebalpattern.png);
+  background-repeat: no-repeat;
+  background-size: 75px;
+  background-position: bottom 5px right 5px;
 }
 
 .lista-pokemons-card:hover {
- transform: scale(1.1);
- transition: ease-in-out;
- transition-duration: 300ms;
+  transform: scale(1.1);
+  transition: ease-in-out;
+  transition-duration: 300ms;
 }
 
 .lista-pokemons-id {
- position: absolute;
- font-size: 4rem;
- font-weight: 700;
- right: 10px;
- color: #3fc7a8;
+  position: absolute;
+  font-size: 4rem;
+  font-weight: 700;
+  right: 10px;
 }
 
 .lista-pokemons-card-name {
- font-size: 4rem;
- margin: 2rem 0;
+  position: relative;
+  font-size: 4rem;
+  margin: 2rem 0;
 }
 
 .lista-pokemons-card-info {
- width: fit-content;
+  position: relative;
+  width: fit-content;
 
- font-size: 3rem;
- margin: 2rem 0;
- padding: 1rem 3rem;
- border-radius: 3rem;
- background-color: #5de0c7;
+  font-size: 3rem;
+  margin: 2rem 0;
+  padding: 1rem 3rem;
+  border-radius: 3rem;
 }
