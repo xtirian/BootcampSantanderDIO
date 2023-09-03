@@ -5,6 +5,7 @@
 
 .content h1 {
   font-size: 9rem;
+  margin: 0.2em 0;
 
   color: #2d3540;
 }
@@ -34,6 +35,8 @@
   background-repeat: no-repeat !important;
 
   box-shadow: 10px 5px 10px #bfbfbf;
+
+  text-transform: capitalize;
 }
 
 .lista-pokemons-card::after {

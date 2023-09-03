@@ -8,3 +8,25 @@ body {
 }
 
 
+.button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 50px;
+}
+
+.button-container button {
+  margin-top: 25px;
+  width: 250px;
+  height: 55px;
+
+  font-size: 4rem;
+  color: #303030;
+  background-color: white;
+  outline: none;
+
+  border: 1px solid #303030;
+  border-radius: 27.5px;
+}
+

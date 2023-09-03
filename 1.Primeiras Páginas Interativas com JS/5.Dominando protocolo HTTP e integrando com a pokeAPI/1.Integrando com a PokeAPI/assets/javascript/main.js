@@ -9,7 +9,6 @@ if (window.innerWidth <= 586) {
 }
 
 
-
 function createCard(pokemon) {
   let name = pokemon.name.split("");
   let id = String(pokemon.id).split("");
@@ -17,18 +16,11 @@ function createCard(pokemon) {
   let type1 = pokemon.types[0].type.name.split("");
   let type2 = [" "];  
 
-  //Set Uppercase in the first letter of the name
-  // let firstLetter = name[0].toUpperCase();
-  // name.shift();
-  // name.unshift(firstLetter);
-  // name = name.join("");
   
-
   //add the 0 before the ID
   while (id.length <= 2) {
     id.unshift("0");
   }
-
   id = id.join("");
 
   //set the type 2
@@ -37,56 +29,37 @@ function createCard(pokemon) {
     type2 = pokemon.types[1].type.name.split("");
   }
 
-  
-  
-
-  //set UpperCase to the first letter os each type
-
-  let datas = [name, type1, type2];
-
-  datas.forEach((info) => {
-    let firstLetter = info[0].toUpperCase();
-    info.shift();
-    info.unshift(firstLetter);
-  });
-
   //define if there is second type in the HTML
   let setType2 = ""; 
-
-  console.log(type2[0])
   if(type2[0] != [" "]){    
-    setType2 = `<p class="lista-pokemons-card-info">${datas[2].join("")}</p>`
+    setType2 = `<p class="lista-pokemons-card-info">${type2.join("")}</p>`
   } 
 
 
 
-  return `<li class="lista-pokemons-card type type-${datas[1].join("")}" style="background-image: url(${img}); ">
+  return `<li class="lista-pokemons-card type type-${type1.join("")}" style="background-image: url(${img}); ">
       <span class="lista-pokemons-id">#${id}</span>
-      <h2 class="lista-pokemons-card-name">${datas[0].join("")}</h2>
-      <p class="lista-pokemons-card-info">${datas[1].join("")}</p>
-      ${setType2}
-      
+      <h2 class="lista-pokemons-card-name">${name.join("")}</h2>
+      <p class="lista-pokemons-card-info">${type1.join("")}</p>
+      ${setType2}      
      </li>`;
 }
 
 var url = `https://pokeapi.co/api/v2/pokemon/?limit=${String(pageCardLimit)}`;
-
-const putCardOnScreen = (result) => {
-  let Page = document.getElementById("pokedex-page");
-
-  Page.innerHTML = result.map(createCard).join("");
-};
+var nextPageURL;
+var previousPageURL;
 
 async function getPokemonDetail(pokemon) {
   let response = await fetch(pokemon.url);
   return await response.json();
-
-  // return await fetch(pokemon.url).then((response) => response.json());
 }
 
-async function Fetch() {
+async function Fetch(url) {
   let response = await fetch(url);
   let data = await response.json();
+
+  nextPageURL = data.next
+  previousPageURL = data.previous
 
   let firstResults = await data.results;
 
@@ -98,15 +71,64 @@ async function Fetch() {
     );
   }
 
-  console.log(newResults[0]);
 
-  // let newResults = await firstResults.map(getPokemonDetail);
-
-  return newResults;
+  return newResults
 }
 
-Fetch().then((pokeDetails) => {
-  let Page = document.getElementById("pokedex-page");
+//verify th previous page if it is undefined and change his color
+
+function verifyButton () {
+  let previousPageButton = window.document.getElementById('Previous-Page')
+
+  if(previousPageURL === null) {
+    previousPageButton.style.display = 'none'
+    
+  
+    
+  } else{
+    previousPageButton.style.display = 'inline-block'
+  }
+  
+}
+
+//fetch start page and the initial pokemons
+Fetch(url).then((pokeDetails) => {
+  
+  verifyButton()
+
+  let Page = document.getElementById("pokedex-page");  
 
   Page.innerHTML = pokeDetails.map(createCard).join("");
+
+  
 });
+
+
+
+
+
+// get to the next page button
+function getNextPage(nextPageURL){
+  Fetch(nextPageURL).then(nextPageDetail => {
+    verifyButton()
+
+    let Page = document.getElementById("pokedex-page");  
+  
+    Page.innerHTML = nextPageDetail.map(createCard).join("");
+
+    
+  })  
+
+}
+
+
+
+function getPreviousPage(previousPageURL){
+  
+
+  Fetch(previousPageURL).then(previousPageDetail => {
+    let Page = document.getElementById("pokedex-page");  
+  
+    Page.innerHTML = previousPageDetail.map(createCard).join("");
+  })  
+}

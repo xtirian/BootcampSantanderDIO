@@ -10,232 +10,232 @@
 
 }
 
-.type-Normal::before {
+.type-normal::before {
  background-color: #c2b5b0;
 }
-.type-Normal .lista-pokemons-id {
+.type-normal .lista-pokemons-id {
  color: #c5b3af;
 }
-.type-Normal .lista-pokemons-card-info {
+.type-normal .lista-pokemons-card-info {
 
 background-color: #d6cdce;
 }
 
-.type-Fighting::before {
+.type-fighting::before {
  background-color: #d78c10
 }
 
-.type-Fighting .lista-pokemons-id {
+.type-fighting .lista-pokemons-id {
  color: #da7e11;
 }
-.type-Fighting .lista-pokemons-card-info {
+.type-fighting .lista-pokemons-card-info {
 
 background-color: #f5c83d;
 }
 
-.type-Flying::before {
+.type-flying::before {
  background-color: #a39e9a
 }
 
-.type-Flying .lista-pokemons-id {
+.type-flying .lista-pokemons-id {
  color: #484c4e;
 }
-.type-Flying .lista-pokemons-card-info {
+.type-flying .lista-pokemons-card-info {
 
 background-color: #e5e0dc;
 }
 
-.type-Poison::before {
+.type-poison::before {
  background-color: #b56fc2
 }
 
-.type-Poison .lista-pokemons-id {
+.type-poison .lista-pokemons-id {
  color: #8a339b;
 }
-.type-Poison .lista-pokemons-card-info {
+.type-poison .lista-pokemons-card-info {
 
 background-color: #dfbae9;
 }
 
-.type-Ground::before {
+.type-ground::before {
  background-color: #eb9435
 }
 
-.type-Ground .lista-pokemons-id {
+.type-ground .lista-pokemons-id {
  color: #e27c38;
 }
-.type-Ground .lista-pokemons-card-info {
+.type-ground .lista-pokemons-card-info {
 
 background-color: #f8c837;
 }
 
-.type-Rock::before {
+.type-rock::before {
  background-color: #d88738
 }
 
-.type-Rock .lista-pokemons-id {
+.type-rock .lista-pokemons-id {
  color: #d17529;
 }
-.type-Rock .lista-pokemons-card-info {
+.type-rock .lista-pokemons-card-info {
 
 background-color: #eec18a;
 }
 
-.type-Bug::before {
+.type-bug::before {
  background-color: #9fc74c
 }
 
-.type-Bug .lista-pokemons-id {
+.type-bug .lista-pokemons-id {
  color: #97c24e;
 }
-.type-Bug .lista-pokemons-card-info {
+.type-bug .lista-pokemons-card-info {
 
 background-color: #b8d347;
 }
 
-.type-Ghost::before {
+.type-ghost::before {
  background-color: #9d6cae
 }
 
-.type-Ghost .lista-pokemons-id {
+.type-ghost .lista-pokemons-id {
  color: #7f52a7;
 }
-.type-Ghost .lista-pokemons-card-info {
+.type-ghost .lista-pokemons-card-info {
 
 background-color: #bba2d0;
 }
 
-.type-Steel::before {
+.type-steel::before {
  background-color: #cfc9c8
 }
 
-.type-Steel .lista-pokemons-id {
+.type-steel .lista-pokemons-id {
  color: #c6b9b6;
 }
-.type-Steel .lista-pokemons-card-info {
+.type-steel .lista-pokemons-card-info {
 
 background-color: #d8d4d2;
 }
 
-.type-Fire::before {
+.type-fire::before {
  background-color: #fb6c6c
 }
 
-.type-Fire .lista-pokemons-id {
+.type-fire .lista-pokemons-id {
  color: #f56060;
 }
-.type-Fire .lista-pokemons-card-info {
+.type-fire .lista-pokemons-card-info {
 
 background-color: #fc8484;
 }
 
-.type-Water::before {
+.type-water::before {
  background-color: #76bdfe
 }
 
-.type-Water .lista-pokemons-id {
+.type-water .lista-pokemons-id {
  color: #6eb4f8;
 }
-.type-Water .lista-pokemons-card-info {
+.type-water .lista-pokemons-card-info {
 
 background-color: #8fd0fe;
 }
 
-.type-Grass::before {
+.type-grass::before {
   background-color: #46d1b2;
 }
-.type-Grass .lista-pokemons-id {
+.type-grass .lista-pokemons-id {
   color: #3fc7a8;
 }
-.type-Grass .lista-pokemons-card-info {
+.type-grass .lista-pokemons-card-info {
 
  background-color: #5de0c7;
 }
 
-.type-Electric::before {
+.type-electric::before {
   background-color: #ffd86f;
 }
-.type-Electric .lista-pokemons-id {
+.type-electric .lista-pokemons-id {
   color: #f0d23c;
 }
-.type-Electric .lista-pokemons-card-info {
+.type-electric .lista-pokemons-card-info {
 
  background-color: #ffe17a;
 }
 
-.type-Psychic::before {
+.type-psychic::before {
   background-color: #dcaee6;
 }
-.type-Psychic .lista-pokemons-id {
+.type-psychic .lista-pokemons-id {
   color: #b266b7;
 }
-.type-Psychic .lista-pokemons-card-info {
+.type-psychic .lista-pokemons-card-info {
 
  background-color: #e3c9ef;
 }
 
-.type-Ice::before {
+.type-ice::before {
  background-color: #83a1d5;
 }
-.type-Ice .lista-pokemons-id {
+.type-ice .lista-pokemons-id {
  color: #6087d5;
 }
-.type-Ice .lista-pokemons-card-info {
+.type-ice .lista-pokemons-card-info {
 
 background-color: #ddeced;
 }
 
-.type-Dragon::before {
+.type-dragon::before {
  background-color: #889448;
 }
-.type-Dragon .lista-pokemons-id {
+.type-dragon .lista-pokemons-id {
  color: #787435;
 }
-.type-Dragon .lista-pokemons-card-info {
+.type-dragon .lista-pokemons-card-info {
 
 background-color: #8d9c51;
 }
 
-.type-Dark::before {
+.type-dark::before {
  background-color: #4c535a;
 }
-.type-Dark .lista-pokemons-id {
+.type-dark .lista-pokemons-id {
  color: #414b4d;
 }
-.type-Dark .lista-pokemons-card-info {
+.type-dark .lista-pokemons-card-info {
 
 background-color: #90999f;
 }
 
-.type-Fairy::before {
+.type-fairy::before {
  background-color: #cb3f7f;
 }
-.type-Fairy .lista-pokemons-id {
+.type-fairy .lista-pokemons-id {
  color: #861d32;
 }
-.type-Fairy .lista-pokemons-card-info {
+.type-fairy .lista-pokemons-card-info {
 
 background-color: #df4585;
 }
 
-.type-Unknown::before{
+.type-unknown::before{
  background-color: #a389c0;
 }
-.type-Unknown .lista-pokemons-id {
+.type-unknown .lista-pokemons-id {
  color: #a184b5;
 }
-.type-Unknown .lista-pokemons-card-info {
+.type-unknown .lista-pokemons-card-info {
 
 background-color: #d1cae5;
 }
 
-.type-Shadow::before {
+.type-shadow::before {
  background-color: #a389c0;
 }
-.type-Shadow .lista-pokemons-id {
+.type-shadow .lista-pokemons-id {
  color: #a184b5;
 }
-.type-Shadow .lista-pokemons-card-info {
+.type-shadow .lista-pokemons-card-info {
 
 background-color: #d1cae5;
 }

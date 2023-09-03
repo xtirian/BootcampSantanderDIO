@@ -1,0 +1,2 @@
+Colocar no README sobre:
+funções async e as promsies
