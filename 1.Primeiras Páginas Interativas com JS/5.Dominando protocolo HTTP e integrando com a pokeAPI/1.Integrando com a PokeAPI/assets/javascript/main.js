@@ -8,15 +8,13 @@ if (window.innerWidth <= 586) {
   pageCardLimit = 25;
 }
 
-
 function createCard(pokemon) {
   let name = pokemon.name.split("");
   let id = String(pokemon.id).split("");
   let img = pokemon.sprites.other.dream_world.front_default;
   let type1 = pokemon.types[0].type.name.split("");
-  let type2 = [" "];  
+  let type2 = [" "];
 
-  
   //add the 0 before the ID
   while (id.length <= 2) {
     id.unshift("0");
@@ -30,14 +28,14 @@ function createCard(pokemon) {
   }
 
   //define if there is second type in the HTML
-  let setType2 = ""; 
-  if(type2[0] != [" "]){    
-    setType2 = `<p class="lista-pokemons-card-info">${type2.join("")}</p>`
-  } 
+  let setType2 = "";
+  if (type2[0] != [" "]) {
+    setType2 = `<p class="lista-pokemons-card-info">${type2.join("")}</p>`;
+  }
 
-
-
-  return `<li class="lista-pokemons-card type type-${type1.join("")}" style="background-image: url(${img}); ">
+  return `<li class="lista-pokemons-card type type-${type1.join(
+    ""
+  )}" style="background-image: url(${img}); ">
       <span class="lista-pokemons-id">#${id}</span>
       <h2 class="lista-pokemons-card-name">${name.join("")}</h2>
       <p class="lista-pokemons-card-info">${type1.join("")}</p>
@@ -58,8 +56,8 @@ async function Fetch(url) {
   let response = await fetch(url);
   let data = await response.json();
 
-  nextPageURL = data.next
-  previousPageURL = data.previous
+  nextPageURL = data.next;
+  previousPageURL = data.previous;
 
   let firstResults = await data.results;
 
@@ -71,64 +69,76 @@ async function Fetch(url) {
     );
   }
 
-
-  return newResults
+  return newResults;
 }
 
 //verify th previous page if it is undefined and change his color
 
-function verifyButton () {
-  let previousPageButton = window.document.getElementById('Previous-Page')
+function startLoading() {
+  let loadingDiv = document.getElementById("loading");
 
-  if(previousPageURL === null) {
-    previousPageButton.style.display = 'none'
-    
-  
-    
-  } else{
-    previousPageButton.style.display = 'inline-block'
+  loadingDiv.classList.remove("disappear");
+  console.log(loadingDiv.classList);
+}
+
+function finishLoading() {
+  let loadingDiv = document.getElementById("loading");
+
+  loadingDiv.classList.add("disappear");
+  console.log(loadingDiv.classList);
+}
+
+function verifyButton() {
+  let previousPageButton = document.getElementById("Previous-Page");
+
+  debugger
+
+  if (previousPageURL === null) {
+    previousPageButton.style.display = "none";
+  } else {
+    previousPageButton.style.display = "inline-block";
   }
-  
+
+  debugger
 }
 
 //fetch start page and the initial pokemons
 Fetch(url).then((pokeDetails) => {
-  
-  verifyButton()
+  verifyButton();
 
-  let Page = document.getElementById("pokedex-page");  
+  startLoading();
+
+  let Page = document.getElementById("pokedex-page");
 
   Page.innerHTML = pokeDetails.map(createCard).join("");
 
-  
+  finishLoading();
 });
 
-
-
-
-
 // get to the next page button
-function getNextPage(nextPageURL){
-  Fetch(nextPageURL).then(nextPageDetail => {
-    verifyButton()
+function getNextPage(nextPageURL) {
+  startLoading();
 
-    let Page = document.getElementById("pokedex-page");  
-  
+  Fetch(nextPageURL).then((nextPageDetail) => {
+    verifyButton();
+    let Page = document.getElementById("pokedex-page");
+
     Page.innerHTML = nextPageDetail.map(createCard).join("");
 
-    
-  })  
-
+    finishLoading();
+  });
 }
 
+function getPreviousPage(previousPageURL) { 
 
+  startLoading();
 
-function getPreviousPage(previousPageURL){
-  
+  Fetch(previousPageURL).then((previousPageDetail) => {
+    verifyButton();
+    let Page = document.getElementById("pokedex-page");
 
-  Fetch(previousPageURL).then(previousPageDetail => {
-    let Page = document.getElementById("pokedex-page");  
-  
     Page.innerHTML = previousPageDetail.map(createCard).join("");
-  })  
+
+    finishLoading();
+  });
 }

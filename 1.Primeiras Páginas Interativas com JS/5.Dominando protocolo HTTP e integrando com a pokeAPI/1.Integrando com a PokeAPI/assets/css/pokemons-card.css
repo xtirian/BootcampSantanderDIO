@@ -10,6 +10,10 @@
   color: #2d3540;
 }
 
+.disappear {
+  display: none;
+}
+
 .lista-pokemons {
   list-style: none;
   padding: 0;
@@ -19,6 +23,8 @@
   grid-template-columns: 1fr 1fr;
 
   color: #f0f2f6;
+
+  min-height: 50%;
 }
 
 .lista-pokemons-card {
