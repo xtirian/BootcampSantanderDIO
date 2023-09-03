@@ -91,7 +91,7 @@ function finishLoading() {
 function verifyButton() {
   let previousPageButton = document.getElementById("Previous-Page");
 
-  debugger
+  
 
   if (previousPageURL === null) {
     previousPageButton.style.display = "none";
@@ -99,7 +99,7 @@ function verifyButton() {
     previousPageButton.style.display = "inline-block";
   }
 
-  debugger
+  
 }
 
 //fetch start page and the initial pokemons
