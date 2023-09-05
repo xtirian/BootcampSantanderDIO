@@ -47,9 +47,29 @@ var url = `https://pokeapi.co/api/v2/pokemon/?limit=${String(pageCardLimit)}`;
 var nextPageURL;
 var previousPageURL;
 
-async function getPokemonDetail(pokemon) {
-  let response = await fetch(pokemon.url);
-  return await response.json();
+/**
+ * Function that creates an promise and returns it for using Promise all
+ * that fetches data concurrently
+ * @param {*} pokemon An Object with the pokemon name and url
+ * @returns {Promise} Promise that will fetch an pokemon
+ */
+function getPokemonDetailPromise(pokemon) {
+  return new Promise((resolve, reject) => {
+    fetch(pokemon.url)
+      .then((response) => {
+        if (!response.ok) {
+          reject(new Error(`Failed to fetch data for ${pokemon.name}`));
+          return;
+        }
+        return response.json();
+      })
+      .then((data) => {
+        resolve(data);
+      })
+      .catch((error) => {
+        reject(error);
+      });
+  });
 }
 
 async function Fetch(url) {
@@ -59,15 +79,14 @@ async function Fetch(url) {
   nextPageURL = data.next;
   previousPageURL = data.previous;
 
-  let firstResults = await data.results;
-
   let newResults = [];
+  let arrayOfPromises = [];
 
-  for (let x = 0; x < firstResults.length; x++) {
-    await getPokemonDetail(firstResults[x]).then((pokeObj) =>
-      newResults.push(pokeObj)
-    );
+  for (let x = 0; x < data.results.length; x++) {
+    arrayOfPromises.push(getPokemonDetailPromise(data.results?.[x]));
   }
+
+  newResults = Promise.all(arrayOfPromises);
 
   return newResults;
 }
@@ -78,28 +97,22 @@ function startLoading() {
   let loadingDiv = document.getElementById("loading");
 
   loadingDiv.classList.remove("disappear");
-  console.log(loadingDiv.classList);
 }
 
 function finishLoading() {
   let loadingDiv = document.getElementById("loading");
 
   loadingDiv.classList.add("disappear");
-  console.log(loadingDiv.classList);
 }
 
 function verifyButton() {
   let previousPageButton = document.getElementById("Previous-Page");
-
-  
 
   if (previousPageURL === null) {
     previousPageButton.style.display = "none";
   } else {
     previousPageButton.style.display = "inline-block";
   }
-
-  
 }
 
 //fetch start page and the initial pokemons
@@ -129,8 +142,7 @@ function getNextPage(nextPageURL) {
   });
 }
 
-function getPreviousPage(previousPageURL) { 
-
+function getPreviousPage(previousPageURL) {
   startLoading();
 
   Fetch(previousPageURL).then((previousPageDetail) => {
