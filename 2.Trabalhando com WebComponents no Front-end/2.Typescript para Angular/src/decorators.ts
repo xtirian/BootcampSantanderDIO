@@ -7,13 +7,6 @@ function exibirNome (target: any){
 }
 
 
-@exibirNome
-class Funcionario {}
-
-@exibirNome
-class Padaria{}
-
-
 function apiVerion( version: string){
  //factor = uma função que retorna outra função
  return (target : any) => {
@@ -48,7 +41,7 @@ function minLength( length: number){
 
 
 class API{
- @minLength(3)
+ //@minLength(3)
  name: string
 
  constructor(name: string){
