@@ -1,0 +1,8 @@
+<!-- isto é um property binder -->
+<!-- Colchetes são para fazer property data bind -->
+<!-- os parenteses são para os event data bind -->
+<input type="text" [value]="placeholder" (input)="placeholder=$any($event.target).value" />
+<p>{{placeholder}}</p>
+<!-- Deu um erro de que não reconhecia o any, então foi só dar o npm run start novamente -->
+
+<p [style.color]="color">{{placepass}}</p>

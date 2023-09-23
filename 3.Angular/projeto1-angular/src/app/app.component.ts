@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'projeto1-angular';
+
+  buttonLabel:string = "Chico moedas";
+  buttonLabel2:string = "Luiza Sonza"
 }
