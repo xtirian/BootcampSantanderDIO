@@ -7,6 +7,7 @@ import { CardsBannerComponent } from '../../components/cards-banner/cards-banner
 import { HeroBannerComponent } from '../../components/hero-banner/hero-banner.component';
 import { HeaderComponent } from '../../components/header/header.component';
 import { HomeComponent } from './home.component';
+import {HeroCardsComponent} from '../../components/hero-cards/hero-cards.component'
 
 
 
@@ -18,6 +19,7 @@ const MaterialComponents = [ MatIconModule ]
     HeroBannerComponent,
     CardsBannerComponent,
     HomeComponent,
+    HeroCardsComponent
 
   ],
   imports: [CommonModule, MaterialComponents],

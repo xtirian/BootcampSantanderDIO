@@ -38,7 +38,7 @@ export class HomeModule {}
 // O Material deve ser importado no módulo que será usado
 
 ```
-4. Comecei a montar a 
+4. Comecei a montar a hero banner, mas não consegui do jeito que eu queria. A principio, queria que a tela motrasse um carrosel caso fosse celular e mostrasse a tela inteira caso fosse normal. Eu sei como fazer, mas não faço ideia de como pegar o innerWidth dentro do angular. Tenho ideias mas não tenho muito mais tempo hoje
 
 
 
