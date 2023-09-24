@@ -1,0 +1,107 @@
+@use '../../sass/variables';
+@use '../../sass/mixin';
+
+%container_header-mobile{
+  padding: 1rem 0;
+  width: 75%;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c6895b;
+
+  .header__container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid variables.$bg2;
+    @extend %container_header-mobile;
+  }
+
+  @include mixin.desktop{
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 2rem;
+
+    background-color: transparent;
+
+    .header__container{
+      padding: 0;
+      border-bottom: none;
+      justify-content: flex-start;
+      gap: 35%;
+    }
+  }
+}
+
+mat-icon{
+color: variables.$icon;
+}
+
+.header__logo{
+  height: 4rem;
+}
+
+.header__searchIcon-container{
+  display: inline-block;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.header__nav{
+  @extend %container_header-mobile;
+
+  display: flex;
+  justify-content: space-around;
+
+  a{
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  @include mixin.desktop{
+    padding: 0 2rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2rem;
+
+    a{
+      font-size: 2.2rem;
+      color: variables.$text1;
+    }
+
+  }
+
+}
+
+
+
+/*
+.switchMode{
+  &::before{
+    content: '';
+    position: inherit;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  animation: pulse 3s infinite;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 1.2rem;
+  z-index: 1;
+
+}
+
+*/
