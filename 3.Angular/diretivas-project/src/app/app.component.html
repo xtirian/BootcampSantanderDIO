@@ -1,0 +1,23 @@
+<h1>{{title}}</h1>
+
+<app-comp-atributos>
+  <h2>ngContent APP</h2>
+  <p>este conteudo está no component app sendo passando para o comp-atributos</p>
+</app-comp-atributos>
+
+<app-card *ngIf="isAliveCard; else elseBlock"></app-card>
+
+<button (click)="disposeCard()">Explode</button>
+
+<!-- Este bloco fica ligado ao app-card que vai chamar este bloco caso o ngIf retorne falso -->
+<ng-template #elseBlock >
+  <p>Olá, eu sou um bloco secreto</p>
+</ng-template>
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
