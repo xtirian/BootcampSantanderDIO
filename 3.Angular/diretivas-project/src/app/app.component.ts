@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'diretivas-project';
+
+  isAliveCard:boolean = true;
+
+  disposeCard():void{
+    this.isAliveCard = false
+  }
+
+
 }

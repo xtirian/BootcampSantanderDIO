@@ -1,0 +1,55 @@
+<p>comp-atributos works!</p>
+
+
+<p [ngClass]="textStyle">Pacote de férias orlando</p>
+
+
+<select (input)="textStyle=$any($event.target).value">
+  <option value="">Choose one status</option>
+  <option value="enable">Enable</option>
+  <option value="disable">Disable</option>
+</select>
+<div>
+  <h1 [ngStyle]="{'background': corFundo, 'color': corFonte}">CURSO ANGULAR</h1>
+
+  <p>cor fundo</p>
+  <input type="text" (input)="corFundo=$any($event.target).value" />
+  <p>cor fonte</p>
+  <input type="text" (input)="corFonte=$any($event.target).value" />
+</div>
+<hr />
+
+<!-- NG Model para trabalhar com peças de formulários -->
+<h2>Lista de Compras</h2>
+<p>adicione um item</p>
+<ul>
+  <p>lista:</p>
+  <li *ngFor="let produto of listaProdutos">{{produto}}</li>
+</ul>
+<div>
+  <input [placeholder]="item" type="text" [(ngModel)]="item" />
+  <span>{{item}}</span>
+</div>
+<button (click)="adicionar()">Adicionar</button>
+
+<!-- Para usar o ngModel precisa importar o FormsModule no app.module -->
+
+<hr />
+
+<h2>ng-template</h2>
+
+<ng-template [ngIf]="isEnable">
+  <a href="">ADICIONAR COMPRA</a>
+</ng-template>
+<br><br>
+<ng-template [ngIf]="!isEnable">
+  <a href="" >ADICIONAR AO CARRINHO</a>
+</ng-template>
+
+<hr />
+
+<h2>ngContent</h2>
+<br>
+<ng-content select="h2" />
+<ng-content select="p" />
+
