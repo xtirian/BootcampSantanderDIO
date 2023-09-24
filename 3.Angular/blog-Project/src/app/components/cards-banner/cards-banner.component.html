@@ -1,0 +1,22 @@
+<div class="card_container">
+  <div *ngFor="let reciep of mockDados" class="card__agregator">
+    <h2 class="card__category">{{reciep.category}} <span class="card__separator"></span> {{reciep.page}} </h2>
+
+    <div class="card__insedGrid">
+      <div class="insedGrid_colunm1">
+        <img [src]="reciep.imgSrc" [alt]="reciep.category">
+      </div>
+
+      <div class="insedGrid_colunm2">
+        <h3 class="reciepTitle">{{reciep.title}}</h3>
+        <p>{{reciep.content}}</p>
+
+        <div class="column2__readmore">
+          <p>Read More + </p>
+          <span></span>
+          <p>{{reciep.coments}} <mat-icon>mode_comment</mat-icon></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
