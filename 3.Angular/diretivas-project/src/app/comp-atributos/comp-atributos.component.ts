@@ -22,6 +22,6 @@ export class CompAtributosComponent {
 
   }
 
-  isEnable: boolean = trgit ue
+  isEnable: boolean = true
 
 }
