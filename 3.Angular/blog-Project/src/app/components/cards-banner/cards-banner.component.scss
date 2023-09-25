@@ -1,9 +1,11 @@
 .card_container {
+  width: 100%;
   display: grid;
   grid-template-columns: 475px 475px 475px;
   padding: 50px 20px;
   gap: 60px;
   overflow-x: scroll;
+  justify-content: center;
 }
 
 .card__agregator {
