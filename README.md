@@ -14,8 +14,8 @@ In this repository you'll find the folders and files related to the Bootcamp Ful
 This is a Blog HomePage created with Angular and Typescript
 
 
-GitHub Repository: [Click here]()
-Live Site URL: [Click here]()
+GitHub Repository: [Click here](https://github.com/xtirian/BootcampSantanderDIO/tree/main/3.Angular/blog-Project)
+Live Site URL: [Click here](https://blog-project-vdacxfm1f-xtirian.vercel.app/)
 
 ## Pokdex
 
