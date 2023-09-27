@@ -1,0 +1,132 @@
+.card__container
+{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  background-color: #232323;
+  width: 250px;
+  color: #fff;
+  border-radius: 10px;
+
+  font-family: sans-serif;
+  padding: 20px;
+  margin: 20px auto;
+
+  .card__title{
+    font-size: 2rem;
+    text-align: center;
+    text-transform: capitalize;
+
+  }
+
+  .card__body{
+    background-color: #a3a3a3;
+    border-radius: 10px;
+
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      width: 90%;
+    }
+
+  }
+
+  .card__stats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+  }
+
+  .card__stats__attribute{
+    padding: 5px 15px;
+  }
+
+  .fire{
+    background-color: orangered;
+  }
+  .water{
+    background-color: rgb(31, 158, 158);
+  }
+  .electric{
+    background-color: rgb(166, 166, 32);
+  }
+  .grass{
+    background-color: olivedrab;
+  }
+  .flying{
+    background-color: rgb(192, 192, 192);
+  }
+  .rock{
+    background-color: rgb(57, 25, 25);
+  }
+  .ground{
+    background-color: rgb(105, 62, 12);
+  }
+  .normal{
+    background-color: #d3d3d3;
+  }
+  .poison{
+    background-color: rgb(77, 11, 77);
+  }
+
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  width: 250px;
+  margin: 50px auto;
+
+  button{
+    background-color: #232323;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: none;
+
+    &:hover{
+      background-color: #a3a3a3;
+    }
+
+    &:active{
+      background-color: white;
+    }
+  }
+}
+
+.searchBar{
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+
+  mat-icon{
+    font-size: 24px;
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 12px);
+  }
+
+  input{
+    width: 100%;
+    font-size: 20px;
+    padding: 5px 10px;
+    color: #232323;
+    border: none;
+    outline: none;
+    background-color: #a3a3a3;
+    border-radius: 30px;
+
+  }
+
+  input[type="text"]:focus ~ mat-icon{
+    display: none;
+  }
+}

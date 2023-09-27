@@ -1,0 +1,20 @@
+<!--
+searchName = $any($event.target)[0].value-->
+<form (submit)="getPokemon(
+  $any($event.target)[0].value.toLowerCase()) ">
+  <label for="" class="searchBar">
+    <input type="text" >
+    <mat-icon>search</mat-icon>
+  </label>
+  <button type="submit">Clique aqui</button>
+</form>
+
+<section class="card__container">
+  <h3 class="card__title">{{pokemon.name}}</h3>
+  <div class="card__body">
+    <img src="{{pokemon.sprites.front_default}}" [alt]='pokemon.name'>
+  </div>
+  <div class="card__stats">
+    <span class="card__stats__attribute {{attribute.type.name}}" *ngFor="let attribute of pokemon.types">{{(attribute.type.name).toUpperCase()}}</span>
+  </div>
+</section>
