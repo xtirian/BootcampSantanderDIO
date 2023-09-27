@@ -1,0 +1,23 @@
+<p>menu works!</p>
+<div>
+  <ul>
+    <!-- Esta é a forma de adicionar os links no angular -->
+    <li>
+      <a
+      [routerLink]="['/'] " [routerLinkActive]="['activated']"
+      [routerLinkActiveOptions]="{exact:true}">
+        Index
+      </a>
+    </li>
+
+    <li>
+      <a
+      [routerLink]="['/portfolio']"
+      [routerLinkActive]="['activated']"
+      [routerLinkActiveOptions]="{exact:true}"
+      >
+        Portfolio
+      </a>
+    </li>
+  </ul>
+</div>
