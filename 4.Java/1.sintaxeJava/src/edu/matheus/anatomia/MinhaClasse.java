@@ -1,3 +1,4 @@
+package edu.matheus.anatomia;
 
 public class MinhaClasse {
   //Código fica aqui
