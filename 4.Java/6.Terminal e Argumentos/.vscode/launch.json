@@ -1,0 +1,36 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "ScannerAboutMe",
+      "request": "launch",
+      "mainClass": "ScannerAboutMe",
+      "projectName": "6.Terminal e Argumentos_a7ce23da"
+    },
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "AboutMe",
+      "request": "launch",
+      "mainClass": "AboutMe",
+      "args": ["Matheus", "Fernandes", "28", "1.81"],
+      "projectName": "6.Terminal e Argumentos_a7ce23da"
+    },
+    {
+      "type": "java",
+      "name": "App",
+      "request": "launch",
+      "mainClass": "App",
+      "projectName": "6.Terminal e Argumentos_a7ce23da"
+    }
+  ]
+}
