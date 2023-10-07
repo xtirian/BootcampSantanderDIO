@@ -1,4 +1,5 @@
-package lanchonete;
+package lanchonete.atendimento.cozinha;
+
 
 public class Cozinheiro {
 	//pode ser default
@@ -11,41 +12,47 @@ public class Cozinheiro {
 	}
 	//pode ser default
 	public void adicionarComboNoBalcao() {
-		adicionarLancheNoBalcao();
-		adicionarSucoNoBalcao();
+		prepararCombo();
 	}
-	public void prepararLanche() {
+	private void prepararLanche() {
 		System.out.println("PREPARANDO LANCHE TIPO HAMBÃšRGUER");
+		selecionarIngredientesLanche();
+		lavarIngredientes();
+		fritarIngredientesLanche();
 	}
-	public void prepararVitamina() {
+	private void prepararVitamina() {
 		System.out.println("PREPARANDO SUCO");
+		selecionarIngredientesVitamina();
+		baterVitaminaLiquidificador();
 	}
-	public void prepararCombo() {
+	private void prepararCombo() {
 		prepararLanche();
 		prepararVitamina();
 	}
-	public void selecionarIngredientesLanche() {
+	private void selecionarIngredientesLanche() {
+		pedirIngredientes(null);
 		System.out.println("SELECIONADO O PÃƒO, SALADA, OVO E CARNE");
 	}
-	public void selecionarIngredientesVitamina() {
+	private void selecionarIngredientesVitamina() {
+		pedirIngredientes(null);
 		System.out.println("SELECIONADO FRUTA, LEITE E SUCO");
 	}
-	public void lavarIngredientes() {
+	private void lavarIngredientes() {
 		System.out.println("LAVANDO INGREDIENTES");
 	}
-	public void baterVitaminaLiquidificador() {
+	private void baterVitaminaLiquidificador() {
 		System.out.println("BATENDO VITAMINA NO LIQUIDIFICADOR");
 	}
-	public void fritarIngredientesLanche() {
+	private void fritarIngredientesLanche() {
+		pedirParaTrocarGas(null);
 		System.out.println("FRITANDO A CARNE E OVO PARA O HAMBÃšRGUER");
 	}
-	public void pedirParaTrocarGas(Atendente meuAmigo) {
+
+	private void pedirParaTrocarGas(Almoxarife meuAmigo) {
 		meuAmigo.trocarGas();
 	}
-	public void pedirParaTrocarGas(Almoxarife meuAmigo) {
-		meuAmigo.trocarGas();
-	}
-	public void pedirIngredientes(Almoxarife almoxarife) {
+	
+	private void pedirIngredientes(Almoxarife almoxarife) {
 		almoxarife.entregarIngredientes();
 	}
 }
